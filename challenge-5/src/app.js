@@ -1,5 +1,21 @@
 const { algoliasearch, instantsearch } = window;
 
+const datepicker = require('js-datepicker');
+
+datepicker('#initDate', {
+  onSelect: (instance, date) => {
+    const input = document.getElementById("initDateMillis");
+    input.innerHTML = date.getTime();
+  }
+});
+
+datepicker('#finalDate', {
+  onSelect: (instance, date) => {
+    const input = document.getElementById("endDateMillis");
+    input.innerHTML = date.getTime();
+  }
+});
+
 const searchClient = algoliasearch(
   'latency',
   '059c79ddd276568e990286944276464a'

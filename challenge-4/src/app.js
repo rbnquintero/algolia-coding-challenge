@@ -14,6 +14,17 @@ search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#searchbox'
   }),
+  instantsearch.widgets.hits({
+    container: '#hits',
+    templates: {
+      item: `
+<article>
+  <h1>{{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</h1>
+  <p>Airport code: {{ iata_code }}</p>
+</article>
+`,
+    },
+  }),
   instantsearch.widgets.refinementList({
     container: '#city-list',
     searchable: true,

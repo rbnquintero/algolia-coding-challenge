@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
   <link rel="stylesheet" href="./src/index.css">
   <link rel="stylesheet" href="./src/app.css">
+  <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 
   <title>challenge-5</title>
 </head>
@@ -32,7 +33,17 @@
   <div class="container">
     <div class="search-panel">
       <div class="search-panel__filters">
-        <h3>Dates</h3>
+        <div style="border-style: dotted; border-color: gray;">
+          <h3>Dates converter</h3>
+          <p>Initial date</p>
+          <input type="text" id="initDate" autocomplete="off">
+          <p id="initDateMillis"></p>
+          <p>Final date</p>
+          <input type="text" id="finalDate" autocomplete="off">
+          <p id="endDateMillis"></p>
+        </div>
+        <br />
+        <h3>Dates selector</h3>
         <div id="date-list"></div>
         <br />
         <h3>Locations</h3>
